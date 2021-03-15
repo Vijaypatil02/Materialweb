@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import {ServicesComponent} from './components/services/services.component';
+import {RegisterComponent} from './components/register/register.component';
+import {LoginComponent} from './components/login/login.component';
+import {GuardService} from './guard.service';
+import {HomeComponent} from './home/home.component';
+import {NavbarComponent} from './components/navbar/navbar.component';
 
 const routes: Routes = [
-  { path: 'services', component: ServicesComponent }
+  { path: 'register', component: RegisterComponent},
+  { path: 'login', component: LoginComponent},
+  { path: '', component: HomeComponent, canActivate: [GuardService] },
+  // { path: '**', redirectTo: ''},
+  {path: 'nav', component: NavbarComponent}
 ];
 
 

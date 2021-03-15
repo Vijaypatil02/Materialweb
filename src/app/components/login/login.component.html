@@ -1,0 +1,43 @@
+<!--<div class="signin-content">-->
+<!--  <mat-card>-->
+<!--    <mat-card-content>-->
+<!--      <form [formGroup]="form" class="example-form" fxLayoutAlign="stretch" fxLayout="column"   (ngSubmit)="save(form)">-->
+<!--        <p>Please login to continue</p>-->
+<!--        <mat-form-field class="full-width-input form-group">-->
+<!--          <input matInput placeholder="User" formControlName="userName"[(ngModel)]="item.email" name="email" required>-->
+<!--&lt;!&ndash;          <mat-error *ngIf="isFieldInvalid('userName')">&ndash;&gt;-->
+<!--&lt;!&ndash;            Please inform your user name&ndash;&gt;-->
+<!--&lt;!&ndash;          </mat-error>&ndash;&gt;-->
+<!--        </mat-form-field>-->
+<!--        <mat-form-field class="full-width-input form-group">-->
+<!--          <input matInput type="password" placeholder="Password" formControlName="password" [(ngModel)]="item.password" name="password" required>-->
+<!--&lt;!&ndash;          <mat-error *ngIf="isFieldInvalid('userName')">&ndash;&gt;-->
+<!--&lt;!&ndash;            Please inform your password&ndash;&gt;-->
+<!--&lt;!&ndash;          </mat-error>&ndash;&gt;-->
+<!--        </mat-form-field>-->
+<!--        <button mat-raised-button color="primary" type="submit">Login</button>-->
+<!--      </form>-->
+<!--    </mat-card-content>-->
+<!--  </mat-card>-->
+<!--</div>-->
+
+<mat-card>
+  <mat-card-content>
+    <form class="example-form" fxLayoutAlign="stretch" fxLayout="column" #myform="ngForm" (ngSubmit)="save(myform)">
+      <h2>Log In</h2>
+      <mat-form-field class="full-width-input">
+        <mat-label>Email Address</mat-label>
+        <input matInput type="email" placeholder="Enter Email Address" name="email" [(ngModel)]="item.email" required>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="Enter Password" name="password" [(ngModel)]="item.password" required>
+      </mat-form-field>
+      <button mat-raised-button color="primary" [disabled]="!myform.valid">Sign In</button>
+<!--      <button mat-raised-button color="primary" *ngIf="!isAuthenticated">Sign In</button>-->
+    </form>
+
+  </mat-card-content>
+
+</mat-card>
+<a  routerLink="/register"  style="text-decoration: none; justify-content: center; display: flex">Sign Up</a>

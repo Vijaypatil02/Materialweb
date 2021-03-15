@@ -1,13 +1,27 @@
 <mat-toolbar color="primary" class="mat-elevation-z6">
-  <button mat-mini-fab mat-raised-button color="accent" (click)="onToolbarMenuToggle()">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span class="titleNav">Material Webs</span>
+<img src="assets/image/Android_O_Preview_Logo.png" style="width: 50px;"/>
+  <span>Attendance Manager</span>
   <div class="spacer"></div>
-  <a mat-flat-button color="primary">Home</a>
-  <a mat-flat-button routerLink="services" color="primary">Services</a>
-  <a mat-flat-button color="primary">Projects</a>
-  <a mat-flat-button color="primary">About</a>
-  <a mat-flat-button color="primary">Login</a>
-  <a mat-flat-button color="accent">Sign Up</a>
+<!--  <a mat-flat-button color="primary">Home</a>-->
+<!--  <a mat-flat-button routerLink="services" color="primary">Services</a>-->
+<!--  <a mat-flat-button color="primary">Projects</a>-->
+<!--  <a mat-flat-button color="primary">About</a>-->
+<!--  <a mat-flat-button routerLink="login" color="primary" style="text-decoration: none" >Login</a>-->
+  <a mat-flat-button color="primary" style="text-decoration: none" (click)="onLogout()" >Logout</a>
+<!--  <button mat-button (click)="onLogout()" *ngIf="isLoggedIn">Logout</button>-->
+  <a mat-flat-button routerLink="register"  style="text-decoration: none; background-color: #efb607; color: #e5e3e3">Sign Up</a>
 </mat-toolbar>
+<!--<mat-toolbar color="primary" *ngIf="isLoggedIn$ | async as isLoggedIn">-->
+<!--  <span>-->
+<!--    Angular NavBar + Login Example #01-->
+<!--  </span>-->
+<!--  <span class="fill-remaining-space"></span>-->
+<!--  <button mat-button>Menu Option 01</button>-->
+<!--  <button mat-button>Menu Option 02</button>-->
+<!--  &lt;!&ndash;button mat-button routerLink="login" *ngIf="!isLoggedIn; else notLoggedIn">Login</button>-->
+<!--  <ng-template #notLoggedIn>-->
+<!--    <button mat-button (click)="onLogout()">Logout</button>-->
+<!--  </ng-template &ndash;&gt;-->
+<!--  <button mat-button (click)="onLogout()" *ngIf="isLoggedIn">Logout</button>-->
+<!--</mat-toolbar>-->
+<router-outlet></router-outlet>

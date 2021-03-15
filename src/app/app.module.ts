@@ -12,16 +12,26 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatCardModule} from '@angular/material/card';
-import { ServicesComponent } from './components/services/services.component';
 import { AppRoutingModule } from './app-routing.module';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ServicesComponent,
-    SidebarComponent
+    RegisterComponent,
+    LoginComponent,
+    MainNavComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +44,14 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     MatListModule,
     MatProgressSpinnerModule,
     MatCardModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FlexLayoutModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

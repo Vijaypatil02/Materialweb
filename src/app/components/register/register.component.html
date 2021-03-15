@@ -1,0 +1,64 @@
+<mat-card>
+  <mat-card-content>
+    <form class="example-form" fxLayoutAlign="stretch" fxLayout="column" #myform="ngForm" (ngSubmit)="save(myform)">
+      <h2>Register</h2>
+      <mat-form-field class="full-width-input">
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="Enter First Name" name="firstname" [(ngModel)]="item.firstname" required>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Enter Last Name" name="lastname" [(ngModel)]="item.lastname" required>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <mat-label>Email Address</mat-label>
+        <input matInput type="email" placeholder="Enter Email Address" name="email" [(ngModel)]="item.email" required>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <mat-label>Phone Number</mat-label>
+        <input matInput placeholder="Enter Phone Number" name="phone" [(ngModel)]="item.phone"  required>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="Enter Password" name="password" [(ngModel)]="item.password" required>
+      </mat-form-field>
+      <button mat-raised-button type="submit"  color="primary" [disabled]="!myform.valid">Sign Up</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+
+
+<!--<div fxLayoutAlign="center center" class="fxFlexFill">-->
+<!--  <mat-card fxFlex="25">-->
+<!--    <form class="example-form" fxLayoutAlign="stretch" fxLayout="column" #myform="ngForm" (ngSubmit)="save(myform)">-->
+<!--      <mat-toolbar color="primary">Registration</mat-toolbar>-->
+
+<!--      <mat-form-field class="example-full-width">-->
+<!--        <mat-label>First Name</mat-label>-->
+<!--        <input matInput placeholder="Enter First Name" name="firstname" [(ngModel)]="item.firstname" required>-->
+<!--      </mat-form-field>-->
+
+<!--      <mat-form-field class="example-full-width">-->
+<!--        <mat-label>Last Name</mat-label>-->
+<!--        <input matInput placeholder="Enter Last Name" name="lastname" [(ngModel)]="item.lastname" required>-->
+<!--      </mat-form-field>-->
+
+<!--      <mat-form-field class="example-full-width">-->
+<!--        <mat-label>Email Address</mat-label>-->
+<!--        <input matInput type="email" placeholder="Enter Email Address" name="email" [(ngModel)]="item.email" required>-->
+<!--      </mat-form-field>-->
+
+<!--      <mat-form-field class="example-full-width">-->
+<!--        <mat-label>Phone Number</mat-label>-->
+<!--        <input matInput placeholder="Enter Phone Number" name="phone" [(ngModel)]="item.phone"  required>-->
+<!--      </mat-form-field>-->
+
+<!--      <mat-form-field class="example-full-width">-->
+<!--        <mat-label>Password</mat-label>-->
+<!--        <input matInput type="password" placeholder="Enter Password" name="password" [(ngModel)]="item.password" required>-->
+<!--      </mat-form-field>-->
+<!--      <button mat-raised-button type="submit"  color="primary" [disabled]="!myform.valid">Sign Up</button>-->
+<!--    </form>-->
+<!--  </mat-card>-->
+<!--</div>-->

@@ -1,3 +1,12 @@
+html,
+body{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -82,3 +91,21 @@ a:link{
 /*.mat-sidenav-content{*/
 /*  margin-left: 70px;*/
 /*}*/
+
+
+/*registration page*/
+.fxFlexFill{
+  margin-top: 70px;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.mat-toolbar{
+  margin-bottom: 20px;
+}
